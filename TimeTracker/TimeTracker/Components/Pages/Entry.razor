@@ -1,0 +1,43 @@
+﻿@page "/entry"
+
+<h3>Time  Entry</h3>
+
+<div class="card">
+    <div class="card-body">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-1"> <p> Name: </p> </div>
+                <div class="col-2"> <input type="text" class="form-control" id="name" placeholder="Name" @bind-value="Record.Name"> </div>
+
+                <div class="col-1"> <p> Date: </p> </div>
+                <div class="col-2"> <input type="date" class="form-control" id="date" @bind-value="Record.Date"> </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-1"> <p> Starting Time: </p> </div>
+                <div class="col-2"> <input type="datetime-local" class="form-control" id="time" @bind-value="Record.StartTime"> </div>
+
+                <div class="col-1"> <p> Ending Time: </p> </div>
+                <div class="col-2"> <input type="datetime-local" class="form-control" id="time2" @bind-value="Record.EndTime"> </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-1"> <p> Description: </p> </div>
+                <div class="col-5"> <input type="text" class="form-control" id="description" placeholder="Describe your work" @bind-value="Record.Description"> </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2"> <button type="button" class="btn btn-success" data-bs-toggle="popover" title="Storing Data" data-bs-content="Your Data will be stored in out Database" @onclick="SaveEntry">Save Entry</button> </div>
+                <div class="col-2"> <button type="button" class="btn btn-primary" @onclick="Clear">Cancel</button> </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+@code {
+
+}
